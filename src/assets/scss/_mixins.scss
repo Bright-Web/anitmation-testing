@@ -1,0 +1,72 @@
+$breakpoints: (
+  'small': 767px,
+  'medium': 992px,
+  'large': 1200px,
+) !default;
+
+@use "sass:math";
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get(($breakpoints, $breakpoint) - 1px)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin multiline-truncate(
+  $font-size: 1rem,
+  $line-height: 1.6,
+  $lines-to-show: 3,
+  $fixed-height: true
+) {
+  // sass-lint:disable-block no-vendor-prefixes, no-duplicate-properties
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  // margin: 0 auto;
+  overflow: hidden;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-overflow: ellipsis;
+  /* autoprefixer: off */
+  -webkit-line-clamp: $lines-to-show;
+  @if $fixed-height {
+    height: $font-size * $line-height * $lines-to-show;
+  } @else {
+    height: auto;
+    max-height: $font-size * $line-height * $lines-to-show;
+  }
+}
+
+@function rem-calc($value) {
+  $remValue: math.div($value, 16) + rem; 
+  @return $remValue;
+}

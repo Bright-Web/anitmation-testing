@@ -1,0 +1,13 @@
+@import 'normalize.css';
+@import 'helpers';
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-background;
+}

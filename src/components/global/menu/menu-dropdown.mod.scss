@@ -1,0 +1,20 @@
+@import 'helpers';
+
+.dropdown {
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    z-index: 1;
+    padding-top: rem-calc(30);
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: rem-calc(10);
+      box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+      border-radius: rem-calc(10);
+    }
+  }
+}

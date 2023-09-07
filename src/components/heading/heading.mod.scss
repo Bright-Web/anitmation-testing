@@ -1,0 +1,52 @@
+@import 'helpers';
+
+.heading {
+  position: relative;
+  color: $dark;
+
+  &--size-sm {
+    .heading__text {
+      @include heading-sm;
+    }
+  }
+
+  &--size-md {
+    .heading__text {
+      @include heading-md;
+    }
+  }
+
+  &--size-lg {
+    .heading__text {
+      @include heading-lg;
+    }
+  }
+
+  &--size-xl {
+    .heading__text {
+      @include heading-xl;
+    }
+  }
+
+  &--size-display {
+    .heading__text {
+      @include heading-display;
+    }
+  }
+
+  &--size-subheading {
+    .heading__text {
+      @include text-sm;
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  &--color-primary {
+    color: $primary;
+  }
+
+  &--color-light {
+    color: $grey-100;
+  }
+}

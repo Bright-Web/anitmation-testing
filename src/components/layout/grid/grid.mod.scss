@@ -1,0 +1,111 @@
+@import 'helpers';
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  // ----- GRID COLUMNS ----- //
+
+  &--columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &--columns-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &--columns-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &--columns-sm-1 {
+    @include breakpoint(small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &--columns-sm-2 {
+    @include breakpoint(small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--columns-sm-3 {
+    @include breakpoint(small) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--columns-sm-4 {
+    @include breakpoint(small) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &--columns-md-2 {
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--columns-md-3 {
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--columns-md-4 {
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &--columns-lg-2 {
+    @include breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--columns-lg-3 {
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--columns-lg-4 {
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // ----- GRID GAP ----- //
+
+  &--gap-0 {
+    gap: 0;
+  }
+
+  &--gap-1 {
+    gap: 1rem;
+  }
+
+  &--gap-2 {
+    gap: 2rem;
+  }
+
+  &--gap-3 {
+    gap: 3rem;
+  }
+
+  &--gap-4 {
+    gap: 4rem;
+  }
+}

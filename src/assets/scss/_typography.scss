@@ -1,0 +1,43 @@
+@import 'helpers';
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: rem-calc(16);
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-top: 0;
+}
+
+div,
+span,
+p,
+a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: rem-calc(38);
+}
+
+h2 {
+  font-size: rem-calc(26);
+}
+
+h3 {
+  font-size: rem-calc(22);
+}

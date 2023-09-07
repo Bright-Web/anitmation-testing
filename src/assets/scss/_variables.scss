@@ -1,0 +1,137 @@
+// ----- COLOURS ----- //
+
+$primary-700: #A61C38;
+$primary-600: #D22F50;
+$primary-500: #9e77ed;
+$primary-400: #FF4F72;
+$primary-300: #d6bbfb;
+$primary-200: #e9d7fe;
+$primary-100: #f4ebff;
+$primary-50: #FFE4EA;
+
+$grey-700: #344054;
+$grey-600: #475467;
+$grey-500: #667085;
+$grey-400: #98a2b3;
+$grey-300: #d0d5dd;
+$grey-200: #eaecf0;
+$grey-100: #f2f4f7;
+$grey-50: #f9fafb;
+
+$primary: $primary-600;
+$secondary: $grey-500;
+
+$white: #fff;
+$black: #000;
+$dark: #101828;
+$light: $primary-50;
+$body-background: #ffcccc;
+$error: rgb(209, 53, 53);
+
+
+// ----- CONTAINER WIDTHS ----- //
+
+$container-sm: 640px;
+$container-md: 890px;
+$container-lg: 1024px;
+$container-xl: 1280px;
+
+// ----- SPACING ----- //
+
+$spacing: 1rem;
+
+// ----- FORMS ----- //
+
+$form-bg: $white;
+$form-border: $grey-300;
+$form-label: $grey-700;
+$form-placeholder: $grey-400;
+$form-radius: 8px;
+$form-focus-border: $primary-300;
+$form-focus-shadow: 0px 0px 0px 4px $primary-100, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+
+
+
+
+
+
+// ----- TYPOGRAPHY ----- //
+
+@mixin heading-display {
+  font-size: rem-calc(48);
+  font-weight: 600;
+  @include breakpoint(medium) {
+    font-size: rem-calc(60);
+  }
+}
+
+@mixin heading-xl {
+  font-size: rem-calc(36);
+  font-weight: 600;
+  line-height: rem-calc(44);
+  @include breakpoint(medium) {
+    font-size: rem-calc(48);
+    line-height: rem-calc(44);
+  }
+}
+
+@mixin heading-lg {
+  font-size: rem-calc(32);
+  font-weight: 600;
+  line-height: rem-calc(38);
+  @include breakpoint(medium) {
+    font-size: rem-calc(36);
+    line-height: rem-calc(44);
+  }
+}
+
+@mixin heading-md {
+  font-size: rem-calc(24);
+  font-weight: 600;
+  line-height: rem-calc(32);
+  @include breakpoint(medium) {
+    font-size: rem-calc(30);
+    line-height: rem-calc(38);
+  }
+}
+
+@mixin heading-sm {
+  font-size: rem-calc(18);
+  font-weight: 600;
+  line-height: rem-calc(28);
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+    line-height: rem-calc(30);
+  }
+}
+
+@mixin text-lg {
+  font-size: rem-calc(18);
+  font-weight: 400;
+  line-height: rem-calc(28);
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+    line-height: rem-calc(30);
+  }
+}
+
+@mixin text-md {
+  font-size: rem-calc(16);
+  font-weight: 400;
+  line-height: rem-calc(24);
+  @include breakpoint(medium) {
+    font-size: rem-calc(18);
+    line-height: rem-calc(28);
+  }
+}
+
+@mixin text-sm {
+  font-size: rem-calc(14);
+  font-weight: 400;
+  line-height: rem-calc(20);
+  @include breakpoint(medium) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+  }
+}

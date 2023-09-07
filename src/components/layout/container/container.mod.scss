@@ -1,0 +1,35 @@
+@import 'helpers';
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+
+  &--size-sm {
+    max-width: $container-sm;
+  }
+
+  &--size-md {
+    max-width: $container-md;
+  }
+
+  &--size-lg {
+    max-width: $container-lg;
+  }
+
+  &--size-xl {
+    max-width: $container-xl;
+  }
+
+  &--gutters {
+    padding: 0 1rem;
+  }
+
+  &--background-Light {
+    background-color: $grey-50;
+  }
+
+  &--background-Dark {
+    background-color: #344054;
+  }
+}
